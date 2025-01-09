@@ -68,4 +68,4 @@ When developing a networked server, security is a critical concern. The followin
 
 - **File System Access**: The server will ensure that client requests are constrained to a specified directory (the basedir), preventing access to files outside this directory. Path traversal attacks (e.g., using ../ to access parent directories) will be blocked.
 - **Server Shutdown**: The server will ensure it is only running during the testing phase and does not remain active indefinitely, potentially leaving open access to the system.
-- **uffer Overflows and Input Validation**: The server will carefully validate input data to prevent common vulnerabilities such as buffer overflows.
+- **Buffer Overflows and Input Validation**: The server will carefully validate input data to prevent common vulnerabilities such as buffer overflows.
