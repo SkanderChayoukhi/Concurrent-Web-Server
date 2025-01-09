@@ -21,8 +21,8 @@ This project is a multithreaded web server implemented in C. It is designed to h
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/webserver.git
-   cd webserver
+   git clone [https://github.com/your-username/webserver.git](https://github.com/SkanderChayoukhi/Concurrent-Web-Server.git)
+   cd Concurrent-Web-Server
    ```
 
 2. Compile the project:
