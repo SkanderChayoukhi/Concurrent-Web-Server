@@ -48,9 +48,13 @@ The web server is configured and run via command-line arguments. The following o
 
 ### Parameters:
 -d basedir: The root directory for serving files. Defaults to the current working directory (.).
+
 -p port: The port number the server listens on. Defaults to 10000.
+
 -t threads: The number of worker threads to create. Defaults to 1.
+
 -b buffers: The number of request buffers for handling incoming connections. Defaults to 1.
+
 ### Example Usage:
 To run the server on port 8003 with 8 threads and a buffer size of 16, use the following command:
 
@@ -58,17 +62,6 @@ To run the server on port 8003 with 8 threads and a buffer size of 16, use the f
    ./wserver -d . -p 8003 -t 8 -b 16
    ```
 
-
-
-## Directory Structure
-
-```
-/webserver
-    /src         - Source files for the server logic
-    /include     - Header files
-    Makefile     - Makefile for building the project
-    README.md    - This file
-```
 
 ## Security Considerations
 When developing a networked server, security is a critical concern. The following considerations will be taken into account:
