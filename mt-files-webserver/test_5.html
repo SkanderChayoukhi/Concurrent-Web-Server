@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #84fab0, #8fd3f4);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff6f61;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: #ff4d4d;
+      transform: scale(1.05);
+    }
+    button:active {
+      background-color: #e03e3e;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #555;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    #message.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur notre page de test</h1>
+  <button id="magicButton">Cliquez-moi</button>
+  <div id="message">Bravo ! Vous avez réussi le cinquième test 🎉</div>
+  <script>
+    const button = document.getElementById("magicButton");
+    const message = document.getElementById("message");
+    button.addEventListener("click", () => {
+      button.textContent = "Patientez...";
+      button.style.backgroundColor = "#ffd700";
+      button.style.cursor = "wait";   
+      setTimeout(() => {
+        button.textContent = "C'est fait !";
+        button.style.backgroundColor = "#4CAF50";
+        button.style.cursor = "default";
+        message.classList.add("visible");
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

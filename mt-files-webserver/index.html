@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb);
+      text-align: center;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    p {
+      color: #ffffff;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 1rem;
+      color: #fff;
+      background: #6a11cb;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      transform: translateY(-3px);
+      background: #2575fc;
+    }
+    button:active {
+      transform: translateY(2px);
+      background: #5e3af5;
+    }
+    #dynamic-text {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    #dynamic-text.visible {
+      opacity: 1;
+    }
+    footer {
+      margin-top: 40px;
+      color: #ffffff;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur Index Page</h1>
+  </header>
+  <main>
+    <button id="magicButton">Commencez ici</button>
+    <div id="dynamic-text">Félicitations, vous avez démarré avec succès ! 🚀</div>
+  </main>
+  <footer>
+    <p>&copy; 2024 concurrency-webserver. Tous droits réservés.</p>
+  </footer>
+  <script>
+    const button = document.getElementById('magicButton');
+    const dynamicText = document.getElementById('dynamic-text');
+    button.addEventListener('click', () => {
+      button.textContent = "Chargement...";
+      button.style.background = "#ff6f61";
+      button.disabled = true;
+      setTimeout(() => {
+        button.textContent = "C'est prêt !";
+        button.style.background = "#2ecc71";
+        dynamicText.classList.add('visible');
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

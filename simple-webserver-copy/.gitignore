@@ -1,0 +1,8 @@
+io_helper.o
+request.o
+spin.cgi
+wclient
+wclient.o
+wserver
+wserver.o
+spin.o
